@@ -1,76 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Header Scroll Effect
-    const header = document.querySelector('header');
-    const stickyCta = document.querySelector('.sticky-cta');
-    const heroSection = document.querySelector('.hero');
+    // 1. Mobile Menu Toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-
-        // Show sticky CTA after hero section
-        if (heroSection) {
-            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-            if (window.scrollY > heroBottom) {
-                stickyCta.classList.add('visible');
-            } else {
-                stickyCta.classList.remove('visible');
-            }
-        }
-    });
-
-    // Smooth Scroll for Internal Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Basic Form Submission (Simulated)
-    const leadForm = document.getElementById('lead-form');
-    if (leadForm) {
-        leadForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const submitBtn = leadForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerText;
-            
-            // Visual feedback
-            submitBtn.innerText = 'Sending Enquiring...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                alert('Thank you! Your enquiry has been received. Our Surrey loft experts will contact you within 24 hours.');
-                leadForm.reset();
-                submitBtn.innerText = originalText;
-                submitBtn.disabled = false;
-            }, 1000);
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.classList.toggle('open');
         });
     }
 
-    // Scroll reveal animation (Intersection Observer)
-    const revealElements = document.querySelectorAll('section, .glass-card');
-    const revealObserver = new IntersectionObserver((entries) => {
+    // 2. Form Submission Handling (Mock)
+    const leadForm = document.getElementById('leadForm');
+    if (leadForm) {
+        leadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(leadForm);
+            alert('Thank you for your enquiry! A member of the RLE Lofts team will call you back shortly.');
+            leadForm.reset();
+        });
+    }
+
+    // 3. Intersection Observer for Fade-In Animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate-fade');
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    revealElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.8s ease-out';
-        revealObserver.observe(el);
+    document.querySelectorAll('.glass-card').forEach(card => {
+        observer.observe(card);
+    });
+
+    // 4. Sticky CTA Visibility logic (Enhanced)
+    const stickyCTA = document.querySelector('.sticky-cta');
+    const heroSection = document.querySelector('.hero, .page-hero');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            stickyCTA.style.display = 'flex';
+        } else {
+            stickyCTA.style.display = 'none';
+        }
+    });
+
+    // 5. Subtle 3D Tilt Effect (Optional)
+    const cards = document.querySelectorAll('.glass-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `perspective(1000px) translateY(0) rotateX(0) rotateY(0)`;
+        });
     });
 });
