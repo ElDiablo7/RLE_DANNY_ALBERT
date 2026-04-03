@@ -1,0 +1,155 @@
+OBJECTIVE:
+Build a high-conversion, SEO-optimised, glassmorphic website for a UK loft conversion company (RLE Lofts & Extensions Surrey), designed to generate leads, rank locally, and convert traffic into enquiries.
+
+BRAND:
+Powered by GRACE-X AI™ Digital Services
+© Zachary Crockett – Founder & AI Systems Architect
+
+STYLE:
+
+* Dark navy / black background
+* Neon blue (#00e0ff) accents
+* Glassmorphism (blur, glow, transparency)
+* Clean, professional, cinematic UI
+* Mobile-first, fast-loading
+
+CORE GOALS:
+
+1. Generate leads (calls + form submissions)
+2. Rank for local SEO (Surrey + borough pages)
+3. Build trust using real company data
+4. Convert visitors into enquiries
+
+---
+
+SITE STRUCTURE:
+
+/index.html
+/loft-conversions-surrey.html
+/loft-conversion-cost-surrey.html
+
+/locations/
+
+* sutton.html
+* croydon.html
+* kingston.html
+* epsom.html
+
+/assets/css/styles.css
+/assets/js/script.js
+
+/components/header.html
+/components/footer.html
+
+---
+
+CONTENT REQUIREMENTS:
+
+Use real business positioning:
+
+* 20+ years experience
+* 5* reputation
+* 3–5 week build time
+* 20% property value increase
+* Fully insured (£2M liability)
+* 5 year warranty
+
+---
+
+GLOBAL COMPONENTS:
+
+HEADER:
+
+* Logo / Name
+* Navigation (Home, Services, Costs, Locations, Contact)
+
+FOOTER:
+
+* Phone number (07877 806276)
+* Trust badges
+* GRACE-X branding
+
+---
+
+KEY SECTIONS (ALL PAGES):
+
+1. HERO
+
+* Headline: Loft Conversions Surrey
+* Subheadline: Increase space & property value
+* CTA: Call Now
+
+2. TRUST BLOCK
+
+* Years experience
+* Reviews
+* Warranty
+* Insurance
+
+3. SERVICES
+
+* Dormer
+* Velux
+* Mansard
+
+4. VALUE SECTION
+
+* Explain 20% property increase
+
+5. LEAD FORM
+
+* Name
+* Postcode
+* Phone
+
+6. CTA STRIP
+
+* “Limited availability this month”
+
+---
+
+SEO REQUIREMENTS:
+
+* Each page targets keyword:
+  "Loft Conversions [Location]"
+* Include internal links between pages
+* Add FAQ schema
+* Add meta titles & descriptions
+* Add H1, H2 structure
+
+---
+
+FUNCTIONALITY:
+
+* Sticky CTA bar
+* Click-to-call button
+* Basic form (HTML, ready for backend)
+* Fast load (<2s target)
+
+---
+
+OUTPUT FORMAT:
+
+Generate FULL PROJECT:
+
+* All HTML files
+* CSS file
+* JS file
+* Folder structure
+
+Return as structured output ready to zip.
+
+NO PLACEHOLDERS.
+REAL COPY ONLY.
+NO GENERIC TEXT.
+
+---
+
+FINAL RESULT:
+
+A production-ready lead generation website that:
+
+* Looks premium
+* Converts traffic
+* Ranks locally
+* Represents GRACE-X AI™ quality

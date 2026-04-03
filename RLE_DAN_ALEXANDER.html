@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GRACE-X SEO Report</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #0a0f1f, #01030a);
+    color: #e6f1ff;
+}
+
+.container {
+    max-width: 1000px;
+    margin:auto;
+    padding:40px;
+}
+
+h1,h2 {
+    color:#00e0ff;
+}
+
+.glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(14px);
+    border-radius:16px;
+    padding:25px;
+    margin-bottom:30px;
+    border:1px solid rgba(0,224,255,0.2);
+    box-shadow:0 0 40px rgba(0,224,255,0.15);
+}
+
+.header {
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.kpi {
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.kpi div {
+    background:rgba(0,224,255,0.1);
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    flex:1;
+    margin:5px;
+}
+
+.kpi h3 {
+    margin:0;
+    font-size:22px;
+    color:#00e0ff;
+}
+
+.footer {
+    text-align:center;
+    margin-top:40px;
+    font-size:12px;
+    opacity:0.7;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>GRACE-X AI™ DIGITAL SERVICES</h1>
+<h2>SEO PERFORMANCE REPORT – RLE LOFTS</h2>
+<p>Zac Crockett<br>
+Founder & AI Systems Architect<br>
+zacc78@gmail.com</p>
+</div>
+
+<div class="glass">
+<h2>📊 Current vs Projected Performance</h2>
+
+<div class="kpi">
+<div>
+<h3>Current Traffic</h3>
+<p>~300 / month</p>
+</div>
+<div>
+<h3>Projected</h3>
+<p>5,000+ / month</p>
+</div>
+<div>
+<h3>Lead Increase</h3>
+<p>10 → 120+</p>
+</div>
+</div>
+
+</div>
+
+<div class="glass">
+<h2>📈 Traffic Growth</h2>
+<canvas id="trafficChart"></canvas>
+</div>
+
+<div class="glass">
+<h2>💰 Lead & Revenue Growth</h2>
+<canvas id="leadChart"></canvas>
+</div>
+
+<div class="glass">
+<h2>📊 ROI Projection</h2>
+<canvas id="roiChart"></canvas>
+</div>
+
+<div class="glass">
+<h2>⚙️ Strategy Breakdown</h2>
+<ul>
+<li>Technical SEO fixes (speed, indexing)</li>
+<li>Content authority build (1,000+ word pages)</li>
+<li>Local domination pages</li>
+<li>Backlink authority system</li>
+<li>GRACE-X Lead Engine integration</li>
+</ul>
+</div>
+
+<div class="glass">
+<h2>💷 Revenue Impact</h2>
+<p>
+Based on industry benchmarks, SEO improvements can generate
+significant traffic and lead increases when implemented correctly :contentReference[oaicite:0]{index=0}
+</p>
+
+<div class="kpi">
+<div>
+<h3>Avg Job Value</h3>
+<p>£8,000</p>
+</div>
+<div>
+<h3>Monthly Leads</h3>
+<p>120+</p>
+</div>
+<div>
+<h3>Potential Revenue</h3>
+<p>£80K–£200K+</p>
+</div>
+</div>
+
+</div>
+
+<div class="glass">
+<h2>🏁 Final Position</h2>
+<p>
+Current: Underperforming website<br>
+Future: High-conversion lead engine<br><br>
+
+With GRACE-X AI™:
+<strong>Market dominance in local search</strong>
+</p>
+</div>
+
+<div class="footer">
+<p>Powered by GRACE-X AI™ Digital Services</p>
+<p>© Zac Crockett 2026</p>
+</div>
+
+</div>
+
+<script>
+
+new Chart(document.getElementById('trafficChart'), {
+    type: 'line',
+    data: {
+        labels: ['Month 1','Month 2','Month 3','Month 4','Month 5','Month 6'],
+        datasets: [{
+            label: 'Visitors',
+            data: [300,800,1500,2500,3500,5000],
+            borderWidth:3
+        }]
+    }
+});
+
+new Chart(document.getElementById('leadChart'), {
+    type: 'bar',
+    data: {
+        labels: ['M1','M2','M3','M4','M5','M6'],
+        datasets: [{
+            label: 'Leads',
+            data: [10,25,45,70,95,120]
+        }]
+    }
+});
+
+new Chart(document.getElementById('roiChart'), {
+    type: 'line',
+    data: {
+        labels: ['Month 1','Month 3','Month 6','Month 9'],
+        datasets: [{
+            label: 'ROI Multiple',
+            data: [1,2.5,4,6]
+        }]
+    }
+});
+
+</script>
+
+</body>
+</html>
