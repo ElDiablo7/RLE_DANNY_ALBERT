@@ -23,7 +23,8 @@ const GraceAssistant = (() => {
     let state = {
         isOpen: false,
         step: 'idle', // idle, quote_name, quote_postcode, quote_type, quote_phone, complete
-        userData: {}
+        userData: {},
+        isSpeaking: false
     };
 
     // 2. Elements Identification
@@ -105,9 +106,44 @@ const GraceAssistant = (() => {
         
         if (type === 'ai') {
             typeWriter(text, msgDiv);
+            speak(text);
         } else {
             msgDiv.textContent = text;
             scrollToBottom();
+        }
+    };
+
+    const speak = (text) => {
+        if (!window.speechSynthesis) return;
+
+        // Cancel any ongoing speech
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        
+        // Settings requested by user
+        utterance.rate = 1.10;
+        utterance.pitch = 1.15;
+        utterance.volume = 1.0;
+
+        const setVoice = () => {
+            const voices = window.speechSynthesis.getVoices();
+            const ukFemaleVoice = voices.find(v => 
+                (v.name.includes('Google') || v.name.includes('Microsoft')) && 
+                v.name.includes('UK') && 
+                (v.name.includes('Female') || v.name.includes('Hazel') || v.name.includes('Serena'))
+            ) || voices.find(v => v.lang === 'en-GB' || v.lang === 'en_GB');
+
+            if (ukFemaleVoice) {
+                utterance.voice = ukFemaleVoice;
+            }
+            window.speechSynthesis.speak(utterance);
+        };
+
+        if (window.speechSynthesis.getVoices().length === 0) {
+            window.speechSynthesis.onvoiceschanged = setVoice;
+        } else {
+            setVoice();
         }
     };
 
