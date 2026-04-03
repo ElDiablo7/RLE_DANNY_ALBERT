@@ -195,10 +195,10 @@ const GraceAssistant = (() => {
                 startQuoteFlow();
                 break;
             case 'about':
-                addMessage("RLE Lofts & Extensions Surrey has over 20 years of experience. We are 5* rated, fully insured with £2M liability, and bieten a 5-year warranty on all builds. Our builds typically take 3-5 weeks!");
+                addMessage("RLE Lofts & Extensions Surrey has over 20 years of experience. We are 5* rated, fully insured with £2M liability, and provide a 12-month warranty on all builds. Our builds typically take 3-5 weeks!");
                 break;
             case 'services':
-                addMessage("We specialize in Dormer (extra height), Velux (simple & bright), and Mansard (maximum volume) conversions. Which one sounds like your goal?");
+                addMessage("We specialize in Dormer (extra height), Velux (simple & bright), Mansard (maximum volume) conversions, and Bespoke House Extensions. Which one sounds like your goal?");
                 break;
             case 'value':
                 addMessage("A professional loft conversion can typically increase your Surrey property value by up to 20%. It's one of the highest-ROI home improvements available.");
@@ -239,8 +239,8 @@ const GraceAssistant = (() => {
             case 'quote_postcode':
                 state.userData.postcode = value;
                 state.step = 'quote_type';
-                addMessage("Got it. What type of conversion are you considering? (Dormer, Velux, Mansard, or Not Sure)");
-                elements.input.placeholder = "Conversion Type";
+                addMessage("Got it. What type of conversion or extension are you considering? (Dormer, Velux, Mansard, Extension, or Not Sure)");
+                elements.input.placeholder = "Service Type";
                 break;
             case 'quote_type':
                 state.userData.type = value;

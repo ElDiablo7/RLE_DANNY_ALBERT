@@ -162,7 +162,7 @@ Future upgrades:
 * 20+ years experience
 * 5★ reputation
 * Fully insured (£2M)
-* 5-year warranty
+* 12-month warranty
 * Fast build times (3–5 weeks)
 
 ---
