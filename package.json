@@ -1,0 +1,21 @@
+{
+  "name": "rle-lofts-surrey",
+  "version": "1.0.0",
+  "description": "High-conversion, glassmorphic website for RLE Lofts & Extensions Surrey.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "loft",
+    "conversion",
+    "surrey",
+    "glassmorphism"
+  ],
+  "author": "GRACE-X AI™ Digital Services",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
