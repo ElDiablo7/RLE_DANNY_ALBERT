@@ -29,6 +29,7 @@ body {
     font-family: 'Outfit', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    padding-top: 110px; /* Offset for tall fixed header */
 }
 
 /* Typography */
@@ -126,7 +127,7 @@ section {
     backdrop-filter: blur(15px);
     background: rgba(2, 6, 23, 0.8);
     border-bottom: 1px solid var(--glass-border);
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Reduced padding for sleeker look */
 }
 
 /* Buttons */
@@ -246,11 +247,12 @@ section {
 
 /* Custom Hero Styles */
 .hero {
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: radial-gradient(circle at center, rgba(0, 224, 255, 0.05) 0%, transparent 70%);
+    padding-top: 2rem;
 }
 
 .hero h1 {
