@@ -294,7 +294,7 @@ section {
 
 /* Logo Image */
 .logo-img {
-    height: 50px;
+    height: 80px;
     width: auto;
     object-fit: contain;
 }
@@ -413,12 +413,23 @@ section {
 }
 
 .logo-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--neon-green);
     text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block;
-    margin-top: 2px;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid var(--glass-border);
+}
+
+@media (max-width: 600px) {
+    .logo-subtitle {
+        display: block;
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+    }
 }
 
 /* Hero Backgrounds */

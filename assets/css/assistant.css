@@ -1,13 +1,13 @@
 /* GRACE-X AI Assistant Styles */
 
 :root {
-    --grace-neon: #00e0ff;
-    --grace-neon-glow: rgba(0, 224, 255, 0.4);
-    --grace-glass: rgba(15, 23, 42, 0.7);
-    --grace-border: rgba(255, 255, 255, 0.1);
+    --grace-neon: #a3ff00;
+    --grace-neon-glow: rgba(163, 255, 0, 0.4);
+    --grace-glass: rgba(15, 23, 42, 0.85);
+    --grace-border: rgba(255, 255, 255, 0.15);
     --grace-text: #f8fafc;
     --grace-text-muted: #94a3b8;
-    --grace-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --grace-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* Floating Launcher */
@@ -15,18 +15,21 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 65px;
-    height: 65px;
-    background: var(--grace-neon);
+    width: 70px;
+    height: 70px;
+    background: rgba(163, 255, 0, 0.15);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--grace-neon);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 0 20px var(--grace-neon-glow);
+    box-shadow: 0 0 20px var(--grace-neon-glow), 
+                inset 0 0 10px rgba(163, 255, 0, 0.2);
     z-index: 10000;
     transition: var(--grace-transition);
-    border: none;
     animation: grace-pulse 2s infinite;
 }
 
@@ -36,15 +39,16 @@
 }
 
 .grace-launcher svg {
-    width: 32px;
-    height: 32px;
-    fill: #020617;
+    width: 35px;
+    height: 35px;
+    fill: var(--grace-neon);
+    filter: drop-shadow(0 0 5px var(--grace-neon-glow));
 }
 
 @keyframes grace-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 224, 255, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(0, 224, 255, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 224, 255, 0); }
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(163, 255, 0, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(163, 255, 0, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(163, 255, 0, 0); }
 }
 
 /* Chat Container */
