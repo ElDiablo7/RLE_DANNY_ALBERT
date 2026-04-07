@@ -12,7 +12,7 @@ const GraceAssistant = (() => {
         initialMessage: "Hi! I'm GRACE-X, your personal AI sales assistant. How can I help you transform your Surrey home today?",
         quickActions: [
             { id: 'quote', text: 'Get Free Quote', icon: `<svg viewBox="0 0 24 24"><path d="M20,2H4C2.89,2 2,2.89 2,4V16C2,17.11 2.89,18 4,18H8V21L12,18H20C21.11,18 22,17.11 22,16V4C22,2.89 21.11,2 20,2M20,16H11.17L10,16.83V16H4V4H20V16Z" /></svg>` },
-            { id: 'about', text: 'About RLE Lofts', icon: `<svg viewBox="0 0 24 24"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V15H11M11,13H13V11H11" /></svg>` },
+            { id: 'about', text: 'About RLE Lofts & Extensions', icon: `<svg viewBox="0 0 24 24"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V15H11M11,13H13V11H11" /></svg>` },
             { id: 'services', text: 'Conversion Types', icon: `<svg viewBox="0 0 24 24"><path d="M3,6H21V18H3V6M12,12H15V9H12V12M15,15V13H12V15H15M8,12H11V9H8V12M11,15V13H8V15H11M19,10V7H16V10H19M19,13H16V16H19V13M5,10V7H2V10H5M5,13H2V16H5V13Z" /></svg>` },
             { id: 'value', text: 'Property Value', icon: `<svg viewBox="0 0 24 24"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.41,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.59,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" /></svg>` },
             { id: 'areas', text: 'Service Areas', icon: `<svg viewBox="0 0 24 24"><path d="M12,2C8.13,2 5,5.13 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9C19,5.13 15.87,2 12,2M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5Z" /></svg>` },
@@ -195,7 +195,7 @@ const GraceAssistant = (() => {
                 startQuoteFlow();
                 break;
             case 'about':
-                addMessage("RLE Lofts & Extensions Surrey has over 20 years of experience. We are 5* rated, fully insured with £2M liability, and provide a 12-month warranty on all builds. Our builds typically take 3-5 weeks!");
+                addMessage("RLE Lofts & Extensions has over 20 years of experience. We are 5* rated, fully insured with £2M liability, and provide a 12-month warranty on all builds. Our builds typically take 3-5 weeks!");
                 break;
             case 'services':
                 addMessage("We specialize in Dormer (extra height), Velux (simple & bright), Mansard (maximum volume) conversions, and Bespoke House Extensions. Which one sounds like your goal?");
@@ -204,10 +204,10 @@ const GraceAssistant = (() => {
                 addMessage("A professional loft conversion can typically increase your Surrey property value by up to 20%. It's one of the highest-ROI home improvements available.");
                 break;
             case 'areas':
-                addMessage("We cover Sutton, Croydon, Kingston, Epsom, and the surrounding Surrey areas. We know local planning rules inside out!");
+                addMessage("We cover London, Sussex, and Surrey (including Sutton, Croydon, Kingston, Epsom). We know local planning rules across these regions inside out!");
                 break;
             case 'contact':
-                addMessage("You can reach Zachary and the team directly at 07877 806276. Would you like to schedule a free survey instead?");
+                addMessage("You can reach Zachary and the team directly at 07877 806276 or email us at RLELOFTS@GMAIL.COM. Would you like to schedule a free survey instead?");
                 break;
         }
     };
@@ -258,7 +258,7 @@ const GraceAssistant = (() => {
 
     const finishFlow = () => {
         elements.footer.style.display = 'none';
-        addMessage("All done! I've sent your details to Zachary Crockett. A member of the RLE Lofts team will call you back shortly. Thank you!");
+        addMessage("All done! I've sent your details to RLELOFTS@GMAIL.COM. A member of the RLE Lofts & Extensions team will call you back shortly. Thank you!");
         console.log("GRACE-X LEAD CAPTURED:", state.userData);
         // Reset to idle after a delay
         setTimeout(() => {

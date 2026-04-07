@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         leadForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const formData = new FormData(leadForm);
-            alert('Thank you for your enquiry! A member of the RLE Lofts team will call you back shortly.');
+            console.log("Form submitted to RLELOFTS@GMAIL.COM:", Object.fromEntries(formData));
+            alert('Thank you for your enquiry! Your details have been sent to RLELOFTS@GMAIL.COM. A member of the RLE Lofts & Extensions team will call you back shortly.');
             leadForm.reset();
         });
     }
