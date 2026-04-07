@@ -9,7 +9,7 @@ const GraceAssistant = (() => {
         name: "GRACE-X",
         tagline: "AI Sales Architect",
         avatar: `<svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" /></svg>`,
-        initialMessage: "Hi! I'm GRACE-X, your personal AI sales assistant. How can I help you transform your Surrey home today?",
+        initialMessage: "Hi! I'm GRACE-X, your personal AI sales assistant. How can I help you transform your London, Surrey or Sussex home today?",
         quickActions: [
             { id: 'quote', text: 'Get Free Quote', icon: `<svg viewBox="0 0 24 24"><path d="M20,2H4C2.89,2 2,2.89 2,4V16C2,17.11 2.89,18 4,18H8V21L12,18H20C21.11,18 22,17.11 22,16V4C22,2.89 21.11,2 20,2M20,16H11.17L10,16.83V16H4V4H20V16Z" /></svg>` },
             { id: 'about', text: 'About RLE Lofts & Extensions', icon: `<svg viewBox="0 0 24 24"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V15H11M11,13H13V11H11" /></svg>` },
